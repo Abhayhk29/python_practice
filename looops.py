@@ -25,10 +25,19 @@ strData = "Hello, World!"
 
 my_list_d = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-for day in my_list_d:
-    if day == "Monday":
-        continue  # Skip the rest of the loop for Monday
-    print(f"Today is {day}.")
-    print(f"Today is {day}.")
-    print(f"Today is {day}.")
+# for day in my_list_d:
+#     if day == "Monday":
+#         continue  # Skip the rest of the loop for Monday
+#     print(f"Today is {day}.")
+#     print(f"Today is {day}.")
+#     print(f"Today is {day}.")
 
+x = 0
+
+while x < 3:
+    x = x + 1
+    for i in my_list_d:
+        if i == "Monday":
+            print("Skipping Monday......................")
+            continue  # Skip the rest of the loop for Monday
+        print(f"Today is {i}.")
