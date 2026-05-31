@@ -1,3 +1,6 @@
+from random import random
+
+
 class Enemy:
 
     type_of_enemy : str
@@ -34,7 +37,12 @@ class Enemy2:
         self.__type_of_enemy = type_of_enemy
 
     def talk(self):
-        print(f'I am an enemy and I have {self.health_points} health points and {self.attack_points} attack points and  type is {self.__type_of_enemy}')
+        did__special_attack = random.random() < 0.5
+        if did__special_attack:
+            self.health_points += 5
+            print(f'{self.__type_of_enemy} performs a special attack!')
+        else:
+            print(f'I am an enemy and I have {self.health_points} health points and {self.attack_points} attack points and  type is {self.__type_of_enemy}')
 
 
 

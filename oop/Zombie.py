@@ -15,3 +15,6 @@ class Zombie(Enemy2):
     def take_damage(self, damage):
         self.health -= damage
         print(f"{self.name} takes {damage} damage! Health is now {self.health}.")
+
+    def special_attack(self):
+        print(f"{self.name} performs a special attack!")
