@@ -42,6 +42,7 @@ db_dependency = Annotated[Session, Depends(get_db)]
 
 def authenticate_user(db: Session, username: str, password: str):
     user = db.query(Users).filter(Users.username == username).first()
+    print(f"Authenticating user: {username}, Found user: {user}")
     if not user:
         return False
     if not bcrypt_context.verify(password, user.hashed_password):
