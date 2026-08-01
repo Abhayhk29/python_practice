@@ -7,3 +7,8 @@ alembic downgrade -1 Run our downgrade migration to our database
 
 
 
+alembic.ini 
+alembic directory 
+
+
+python -m alembic init alembic(we can name as per our requirement)

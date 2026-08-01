@@ -13,8 +13,8 @@ from typing import Annotated
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from fastapi import Body, APIRouter, Depends, HTTPException, status, Path, Query
-from models import Todo
-from database import SessionLocal
+from ..models import Todo
+from ..database import SessionLocal
 from .auth import get_current_user
 
 router = APIRouter()

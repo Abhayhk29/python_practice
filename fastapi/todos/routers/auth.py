@@ -2,11 +2,11 @@ from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel, Field
-from models import Users
+from ..models import Users
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 from typing import Annotated
-from database import SessionLocal
+from ..database import SessionLocal
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt
 
